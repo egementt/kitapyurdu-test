@@ -1,0 +1,14 @@
+2022-08-06 16:02:15 INFO  HomePage:34 - Text sent to search area: roman
+  2022-08-06 16:02:18 INFO  HomePage:42 - Hit Enter key to search.
+  2022-08-06 16:02:18 INFO  HomePage:50 - Random book selected: Fazıl Hüsnü Dağl...
+  2022-08-06 16:02:18 INFO  HomePage:57 - Book added to chart.
+  2022-08-06 16:02:19 INFO  HomePage:70 - 1 items at the chart.
+  2022-08-06 16:02:19 INFO  HomePage:77 - Clicked the chart button
+  2022-08-06 16:02:20 INFO  HomePage:83 - Clicked the go to chart button
+  2022-08-06 16:02:20 INFO  HomePage:94 - Current quantity of product is 1
+  2022-08-06 16:02:21 INFO  HomePage:103 - Add 1 to the current quantity. New value of quantity is: 1
+  2022-08-06 16:02:21 INFO  HomePage:109 - Chart refreshed.
+  2022-08-06 16:02:21 INFO  HomePage:116 - Chart updating...
+  2022-08-06 16:02:22 INFO  HomePage:125 - Clicked the delete button.
+  2022-08-06 16:02:22 INFO  HomePage:131 - Chart is empty
+  
