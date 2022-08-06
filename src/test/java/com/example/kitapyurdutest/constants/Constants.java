@@ -13,10 +13,10 @@ public class Constants {
 
     public static final By CART_ICON = By.id("cart-items");
 
-    public static final By BUTTON_ADD_TO_CHART = By.className("add-to-cart");
+    public static final By BUTTON_ADD_TO_CART = By.className("add-to-cart");
     public static final By MY_CART = By.id("sprite-cart-icon");
 
-    public static final By BUTTON_GO_TO_CHART = By.id("js-cart");
+    public static final By BUTTON_GO_TO_CART = By.id("js-cart");
 
     public static final By PRODUCT_QUANTITY_TEXT = By.name("quantity");
 
@@ -26,7 +26,7 @@ public class Constants {
 
     public static final By BUTTON_DELETE_BOOK = By.className("remove");
 
-    public static final By TEXT_CHART_EMPTY = By.id("cart-items-empty");
+    public static final By TEXT_CART_EMPTY = By.id("cart-items-empty");
 
 
 }

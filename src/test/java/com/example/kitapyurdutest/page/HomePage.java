@@ -19,7 +19,6 @@ public class HomePage extends BasePage {
     public HomePage(WebDriver driver) {
         super(driver);
         PropertyConfigurator.configure("C:\\Users\\egeme\\Desktop\\seleniumWork\\kitapyurdu-test\\src\\log4j.properties");
-
     }
 
     public HomePage sendTextSearch(String text){
@@ -53,34 +52,34 @@ public class HomePage extends BasePage {
 
     public HomePage addToChart(){
         WebElement webElement = selectRandomBook();
-        webElement.findElement(BUTTON_ADD_TO_CHART).click();
-        logger.info("Book added to chart.");
+        webElement.findElement(BUTTON_ADD_TO_CART).click();
+        logger.info("Book added to cart.");
         return this;
     }
 
-    public Integer checkMyChart() {
-        String chartText = findElement(CART_ICON).getText();
-        int chartValue = Integer.parseInt(chartText);
-        if (chartValue == 0){
-            logger.info("Chart is empty.");
+    public Integer checkMyCart() {
+        String cartText = getText(CART_ICON);
+        int cartValue = Integer.parseInt(cartText);
+        if (cartValue == 0){
+            logger.info("Cart is empty.");
         }
-        else if (chartValue < 0){
-            logger.error("Chart value can not be lower than 0");
+        else if (cartValue < 0){
+            logger.error("Cart value can not be lower than 0");
         }else{
-            logger.info(chartValue + " items at the chart.");
+            logger.info(cartValue + " items at the chart.");
         }
-        return chartValue;
+        return cartValue;
     }
 
-    public HomePage clickMyChartButton(){
-        findElement(MY_CART).click();
-        logger.info("Clicked the chart button");
+    public HomePage clickMyCartButton(){
+        click(MY_CART);
+        logger.info("Clicked the cart button");
         return this;
     }
 
-    public HomePage clickGoToChartButton(){
-        findElement(BUTTON_GO_TO_CHART).click();
-        logger.info("Clicked the go to chart button");
+    public HomePage clickGoToCartButton(){
+        click(BUTTON_GO_TO_CART);
+        logger.info("Clicked the go to cart button");
         return this;
     }
 
@@ -98,37 +97,37 @@ public class HomePage extends BasePage {
 
     public HomePage addQuantity(){
         int quantity = getQuantityOfProduct();
-        findElement(PRODUCT_QUANTITY_TEXT).clear();
+        clear(PRODUCT_QUANTITY_TEXT);
         sendKeys(PRODUCT_QUANTITY_TEXT, String.valueOf(quantity + 1));
         logger.info("Add 1 to the current quantity. New value of quantity is: " +quantity);
         return this;
     }
 
     public HomePage refreshCart(){
-        findElement(BUTTON_REFRESH).click();
-        logger.info("Chart refreshed.");
+        click(BUTTON_REFRESH);
+        logger.info("Cart refreshed.");
         return this;
     }
 
     public HomePage checkAlert(){
-        String expectedString = findElement(POPUP_REFRESH).getText();
+        String expectedString = getText(POPUP_REFRESH);
         if (!expectedString.isEmpty()){
-            logger.info("Chart updating...");
+            logger.info("Cart updating...");
         }else {
-            logger.error("Char doesn't update.");
+            logger.error("Car doesn't update.");
         }
         return this;
     }
 
     public HomePage clickDeleteButton(){
-        findElement(BUTTON_DELETE_BOOK).click();
+        click(BUTTON_DELETE_BOOK);
         logger.info("Clicked the delete button.");
         return this;
     }
 
     public HomePage checkChartItemsEmpty(){
-        findElement(TEXT_CHART_EMPTY).getText();
-        logger.info("Chart is empty");
+        getText(TEXT_CART_EMPTY);
+        logger.info("Cart is empty");
         return this;
     }
 

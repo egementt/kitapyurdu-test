@@ -39,14 +39,14 @@ public class BasePage {
         findElement(by).click();
     }
 
-    public void hoverElement(By by) {
-        Actions actions = new Actions(driver);
-        actions.moveToElement(findElement(by)).build().perform();
-    }
-
     public String getText(By by){
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
         return findElement(by).getText();
+    }
+
+    public void clear(By by){
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
+         findElement(by).clear();
     }
 
     public WebDriver getDriver() {
